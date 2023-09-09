@@ -1,4 +1,5 @@
 const modal = document.getElementById('modal');
+const closeButton = document.getElementsByClassName('btn-close')[0];
 
 function nextPage() {
   let nameValue = document.getElementsByName('name')[0].value;
@@ -8,7 +9,14 @@ function nextPage() {
   modal.showModal();
 };
 
-document.getElementsByClassName('btn-close')[0].addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
   modal.close();
   window.location.href = './assets/html/navers.html';
+});
+
+window.addEventListener('load', () => {
+  let activeUser = JSON.parse(localStorage.getItem('activeUser'));
+  if (activeUser) {
+    window.location.href = './assets/html/navers.html';
+  }
 });
