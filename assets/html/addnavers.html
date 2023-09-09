@@ -8,7 +8,7 @@
 <body>
   <nav>
     <p>Naver.js</p>
-    <p>Sair</p>
+    <p class="btn-logout">Sair</p>
   </nav>
   <header> 
     <h1><span class="btn-back">&lt;</span>Adicionar navers</h1>
@@ -16,30 +16,30 @@
   <form action="javascript:;">
     <section>
       <div class="field">
-        <label for="">Nome</label>
-        <input type="text">
+        <label for="name">Nome</label>
+        <input type="text" name="name">
       </div>
       <div class="field">
-        <label for="">Idade</label>
-        <input type="text">
+        <label for="age">Idade</label>
+        <input type="text" name="age">
       </div>
       <div class="field">
-        <label for="">Projetos em que participou</label>
-        <input type="text">
+        <label for="projects">Projetos em que participou</label>
+        <input type="text" name="projects">
       </div>
     </section>
     <section>
       <div class="field">
-        <label for="">Cargo</label>
-        <input type="text">
+        <label for="role">Cargo</label>
+        <input type="text" name="role">
       </div>
       <div class="field">
-        <label for="">Tempo de empresa</label>
-        <input type="text">
+        <label for="time">Tempo de empresa</label>
+        <input type="text" name="time">
       </div>
       <div class="field">
-        <label for="">URL da foto naver</label>
-        <input type="text">
+        <label for="image">URL da foto naver</label>
+        <input type="url" name="image">
       </div>
     </section>
     <input class="btn-save" type="submit" value="Salvar">
