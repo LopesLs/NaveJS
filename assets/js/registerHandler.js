@@ -28,10 +28,12 @@ document.getElementsByClassName('btn-save')[0].addEventListener('click', () => {
 
   localStorage.setItem('navers', JSON.stringify(navers));
 
+  document.body.style.opacity = '0.3';
   modal.showModal();
 });
 
 document.getElementsByClassName('btn-close')[0].addEventListener('click', () => {
+  document.body.style.opacity = '1';
   modal.close();
 })
 

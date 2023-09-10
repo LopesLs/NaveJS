@@ -6,11 +6,13 @@ function nextPage() {
   let emailValue = document.getElementsByName('email')[0].value;
   
   localStorage.setItem('activeUser', JSON.stringify({name: nameValue, email: emailValue}));
+  document.body.style.opacity = '0.3';
   modal.showModal();
 };
 
 closeButton.addEventListener('click', () => {
   modal.close();
+  document.body.style.opacity = '1';
   window.location.href = './assets/html/navers.html';
 });
 
