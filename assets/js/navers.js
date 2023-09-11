@@ -2,7 +2,12 @@ let container = document.querySelector('.navers-container');
 
 window.addEventListener('load', () => {
   let navers = JSON.parse(localStorage.getItem('navers'));
+  let activeUser = JSON.parse(localStorage.getItem('activeUser'));
   
+  if (!activeUser) {
+    window.location.href = "../../index.html"
+  };
+
   if (!navers) {
     container.innerHTML = '<p>Nenhum naver encontrado</p>';
   };
