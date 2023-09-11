@@ -1,5 +1,12 @@
 const modal = document.getElementById('modal');
 
+window.addEventListener('load', () => {
+  let activeUser = JSON.parse(localStorage.getItem('activeUser'));
+  if (!activeUser) {
+    window.location.href = "../../index.html";
+  }
+});
+
 document.getElementsByClassName('btn-save')[0].addEventListener('click', () => {
   let navers = JSON.parse(localStorage.getItem('navers'));
 
@@ -35,6 +42,7 @@ document.getElementsByClassName('btn-save')[0].addEventListener('click', () => {
 document.getElementsByClassName('btn-close')[0].addEventListener('click', () => {
   document.body.style.opacity = '1';
   modal.close();
+  window.location.href = '../html/navers.html';
 })
 
 document.getElementsByClassName('btn-back')[0].addEventListener('click', () => {
