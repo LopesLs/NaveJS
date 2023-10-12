@@ -1,4 +1,5 @@
 let container = document.querySelector('.navers-container');
+let modal = document.querySelector('#modal');
 
 window.addEventListener('load', () => {
   let navers = JSON.parse(localStorage.getItem('navers'));
@@ -28,8 +29,12 @@ container.addEventListener('click', (event) => {
 
   if (target.classList.contains('delete-button')) {
     deleteNaver(target);
-  } else if (target.classList.contains('edit-button')) {
+  }
+    else if (target.classList.contains('edit-button')) {
     editNaver(target);
+  }
+    else if (target.classList.contains('naver-card')) {
+      modal.showModal();
   };
 });
 
@@ -58,3 +63,7 @@ const editNaver = (naverTarget) => {
   localStorage.setItem('naverToEdit', JSON.stringify(naverName));
   window.location.href = './editnavers.html';
 };
+
+const buildModal = (target) => {
+  
+}
